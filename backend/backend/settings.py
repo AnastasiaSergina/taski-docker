@@ -1,15 +1,22 @@
-from pathlib import Path
-
 import os
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^'
+SECRET_KEY = (
+    'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_'
+    'm6ylm0s$h!-p@on1_^'
+)
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['89.169.169.246','127.0.0.1', 'localhost', 'mytaski.hopto.org']
+ALLOWED_HOSTS = [
+    '89.169.169.246',
+    '127.0.0.1',
+    'localhost',
+    'mytaski.hopto.org'
+]
 
 
 # Application definition
@@ -78,19 +85,30 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'MinimumLengthValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'CommonPasswordValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'NumericPasswordValidator'
+        ),
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
