@@ -15,7 +15,7 @@ services:
     image: serginaanastasia/taski_backend
     env_file: .env
     volumes:
-      - static_volume:/backend_static
+      - static_volume:/app/collected_static
   frontend:
     image: serginaanastasia/taski_frontend  # Качаем с Docker Hub
     env_file: .env
@@ -26,6 +26,6 @@ services:
     image: serginaanastasia/taski_gateway  # Качаем с Docker Hub
     env_file: .env
     volumes:
-      - static_volume:/staticfiles/
+      - static_volume:/app/collected_static
     ports:
       - 8000:80 
