@@ -9,7 +9,7 @@ SECRET_KEY = (
     'm6ylm0s$h!-p@on1_^'
 )
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '89.169.169.246',
