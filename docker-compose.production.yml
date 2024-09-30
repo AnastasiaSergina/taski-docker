@@ -15,7 +15,7 @@ services:
     image: serginaanastasia/taski_backend
     env_file: .env
     volumes:
-      - static_volume:/app/collected_static
+      - static_volume:/backend_static
     depends_on:
       - db
 
@@ -29,8 +29,7 @@ services:
     image: serginaanastasia/taski_gateway
     env_file: .env
     volumes:
-      - static_volume:/app/collected_static
-      - static_volume:/frontend_static
+      - static_volume:/collected_static
     ports:
       - 8000:80
     depends_on:
