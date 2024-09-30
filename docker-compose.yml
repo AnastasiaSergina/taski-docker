@@ -18,14 +18,15 @@ services:
   frontend:
     env_file: .env
     build: ./frontend/
-    command: cp -r /app/build/. /app/collected_static/
+    command: cp -r /app/build/. /frontend_static
     volumes:
-      - static_volume:/app/collected_static
+      - static_volume:/frontend_static
 
   gateway:
     build: ./gateway/
     env_file: .env
     volumes:
       - static_volume:/app/collected_static
+      - static_volume:/frontend_static
     ports:
       - 8000:80 
