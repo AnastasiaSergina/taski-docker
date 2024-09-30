@@ -22,9 +22,9 @@ services:
   frontend:
     image: serginaanastasia/taski_frontend
     env_file: .env
-    command: cp -r /app/build/. /frontend_static
+    command: cp -r /app/build/. /app/collected_static
     volumes:
-      - static_volume:/frontend
+      - static_volume:/app/collected_static
   gateway:
     image: serginaanastasia/taski_gateway
     env_file: .env
